@@ -37,7 +37,7 @@ def _start_server_with_mcp(mcp_json: str, **kwargs) -> ServerProcess:
     srv = ServerPreset.router()
     srv.server_tools = "all"
     srv.no_ui = True
-    srv.server_port = 8085  # avoid conflict with load_all() which uses 8080
+    srv.server_port = 8085  # avoid conflict with load_all() which uses 11434
     srv.mcp_servers_json = mcp_json
     for k, v in kwargs.items():
         setattr(srv, k, v)

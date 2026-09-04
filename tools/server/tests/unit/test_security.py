@@ -109,7 +109,7 @@ def test_cors_options(origin: str, cors_header: str, cors_header_value: str):
 
 @pytest.mark.parametrize("origin", [
     "http://localhost",
-    "http://localhost:8080",
+    "http://localhost:11434",
     "http://127.0.0.1",
     "http://127.0.0.1:3000",
     "http://[::1]",
@@ -155,12 +155,12 @@ def test_cors_origins_defaults_to_localhost_with_tools_enabled():
     server.server_tools = "all"
     server.start()
     res = server.make_request("OPTIONS", "/completions", headers={
-        "Origin": "http://localhost:8080",
+        "Origin": "http://localhost:11434",
         "Access-Control-Request-Method": "POST",
         "Access-Control-Request-Headers": "Authorization",
     })
     assert res.status_code == 200
-    assert res.headers["Access-Control-Allow-Origin"] == "http://localhost:8080"
+    assert res.headers["Access-Control-Allow-Origin"] == "http://localhost:11434"
 
     res = server.make_request("OPTIONS", "/completions", headers={
         "Origin": "http://evil.com",

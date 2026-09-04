@@ -77,7 +77,7 @@ struct server_http_context {
 
     std::string path_prefix;
     std::string hostname;
-    int port    = 8080;
+    int port    = 11434;
     bool is_ssl = false;
 
     server_http_context();

@@ -69,7 +69,7 @@ struct gcp_params {
         enabled = getenv("AIP_MODE", "") == "PREDICTION";
         path_health = getenv("AIP_HEALTH_ROUTE", "", true); // default: using the route defined in server.cpp
         path_predict = getenv("AIP_PREDICT_ROUTE", "/predict", true);
-        port = std::stoi(getenv("AIP_HTTP_PORT", "8080"));
+        port = std::stoi(getenv("AIP_HTTP_PORT", "11434"));
     }
 
     static std::string getenv(const char * name, const std::string & default_value, bool ensure_leading_slash = false) {
@@ -443,7 +443,7 @@ bool server_http_context::start() {
         srv->set_address_family(AF_UNIX);
         // bind_to_port requires a second arg, any value other than 0 should
         // simply get ignored
-        was_bound = srv->bind_to_port(hostname, 8080);
+        was_bound = srv->bind_to_port(hostname, 11434);
     } else {
         SRV_TRC("%s", "binding port with default address family\n");
         // bind HTTP listen port

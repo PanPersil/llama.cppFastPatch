@@ -27,7 +27,7 @@ It's possible to override some scenario steps values with environment variables:
 
 | variable                 | description                                                                                    |
 |--------------------------|------------------------------------------------------------------------------------------------|
-| `PORT`                   | `context.server_port` to set the listening port of the server during scenario, default: `8080` |
+| `PORT`                   | `context.server_port` to set the listening port of the server during scenario, default: `11434` |
 | `LLAMA_SERVER_BIN_PATH`  | to change the server binary path, default: `../../../build/bin/llama-server`                         |
 | `DEBUG`                  | to enable steps and server verbose mode `--verbose`                                       |
 | `N_GPU_LAYERS`           | number of model layers to offload to VRAM `-ngl --n-gpu-layers`                                |
@@ -74,7 +74,7 @@ server can be started in a debugger.
 Example using `gdb`:
 ```console
 $ gdb --args ../../../build/bin/llama-server \
-    --host 127.0.0.1 --port 8080 \
+    --host 127.0.0.1 --port 11434 \
     --temp 0.8 --seed 42 \
     --hf-repo ggml-org/models --hf-file tinyllamas/stories260K.gguf \
     --batch-size 32 --no-slots --alias tinyllama-2 --ctx-size 512 \
@@ -84,7 +84,7 @@ And a break point can be set in before running:
 ```console
 (gdb) br server.cpp:4604
 (gdb) r
-main: server is listening on http://127.0.0.1:8080 - starting the main loop
+main: server is listening on http://127.0.0.1:11434 - starting the main loop
 srv  update_slots: all slots are idle
 ```
 

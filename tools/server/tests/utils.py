@@ -50,7 +50,7 @@ class ServerError(Exception):
 class ServerProcess:
     # default options
     debug: bool = False
-    server_port: int = 8080
+    server_port: int = 11434
     server_host: str = "127.0.0.1"
     model_hf_repo: str | None = "ggml-org/models"
     model_hf_file: str | None = "tinyllamas/stories260K.gguf"
