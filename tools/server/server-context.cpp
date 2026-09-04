@@ -5125,7 +5125,7 @@ json server_routes::get_model_info() const {
         {"tags",     meta->model_tags},
         {"object",   "model"},
         {"created",  std::time(0)},
-        {"owned_by", "llamacpp"},
+        {"owned_by", "UnionCors"},
         {"meta",     {
             {"vocab_type",  meta->model_vocab_type},
             {"n_vocab",     meta->model_vocab_n_tokens},

@@ -1201,7 +1201,7 @@ Example:
             "id": "../models/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
             "object": "model",
             "created": 1735142223,
-            "owned_by": "llamacpp",
+            "owned_by": "UnionCors",
             "meta": {
                 "vocab_type": 2,
                 "n_vocab": 128256,

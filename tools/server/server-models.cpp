@@ -1962,7 +1962,7 @@ void server_models_routes::init_routes() {
                 {"aliases",       meta.aliases},
                 {"tags",          meta.tags},
                 {"object",        "model"},    // for OAI-compat
-                {"owned_by",      "llamacpp"}, // for OAI-compat
+                {"owned_by",      "UnionCors"}, // for OAI-compat
                 {"created",       t},          // for OAI-compat
                 {"status",        status},
                 {"architecture",  architecture},

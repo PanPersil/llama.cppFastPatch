@@ -84,7 +84,7 @@ export interface ApiModelDataEntry {
 	name?: string;
 	/** Object type, always "model" */
 	object: string;
-	/** Owner, usually "llamacpp" */
+	/** Owner, usually "UnionCors" */
 	owned_by: string;
 	/** Creation timestamp */
 	created: number;
